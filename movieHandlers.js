@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line no-undef
 const database = require("./database");
 
 const getMovies = (req, res) => {
