@@ -47,13 +47,6 @@ app.post("/api/users", hashPassword, userHandlers.postUser); //********non admin
 app.put("/api/users/:id", userHandlers.updateUser);
 app.delete("/api/users/:id", userHandlers.deleteUser);
 
-//***************************************************************authentification **********************************************************************************
-
-app.post(
-  "/api/login",
-  userHandlers.getUserByEmailWithPasswordAndPassToNext,
-  verifyPassword
-);
 app.post("/api/movies", verifyToken, movieHandlers.postMovie);
 app.put("/api/movies/:id", verifyToken, movieHandlers.updateMovie);
 app.delete("/api/movies/:id", verifyToken, movieHandlers.deleteMovie);
